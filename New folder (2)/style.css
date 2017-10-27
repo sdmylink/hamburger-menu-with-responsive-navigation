@@ -1,0 +1,434 @@
+@charset "utf-8";
+/* font */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto:100,300,400,500,700,900');
+/* CSS Document */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    overflow: hidden;
+}
+
+.spacer {
+    clear: both;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+}
+
+textarea::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    opacity: 1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    display: block;
+    max-width: 1170px;
+}
+
+.hamburger-menu-wrapper{
+    display: none;
+}
+.logo {
+    max-width: 180px;
+    display: block;
+    overflow: hidden;
+    background: #ccc;
+    float: left;
+    position: absolute;
+    z-index: 11;
+}
+
+.logo-wpr img {
+    width: 100%;
+}
+
+/*navigation*/
+    nav,
+    nav ul,
+    nav ul li,
+    nav ul li a {
+        position: relative;
+    }
+nav {
+    background-color: #2e1f2e;
+    display: block;
+    height: auto;
+    /*    float: right;*/
+}
+
+.nav-wrapper {
+    background-color: #2e1f2e;
+    height: auto;
+    width: 100%;
+}
+
+nav ul {
+    display: block;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+/*    border-bottom: 0.5px solid #444444;*/
+/*    text-align: center;*/
+}
+
+nav ul li a {
+    font-size: 15px;
+    color: #fff;
+    line-height: 70px;
+    padding: 20px 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+nav ul li a:hover,
+nav ul li:hover a:focus{
+    color: #00baff;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+/*sub_nav*/
+nav ul ul{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    display: none;
+    background-color: #544554;
+     margin-left: -15px;
+}
+nav ul ul li {
+    border: none;
+/*    width: 100%;*/
+    display: block;
+    width: 200px;
+}
+.sub_nav li a {
+    padding: 10px 20px;
+    line-height: 25px;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.sub_nav li:hover a,
+.sub_nav li a:hover {
+    background-color: #2e1f2e;
+}
+
+/*list_nav*/
+nav .list_nav {
+    left: 215px;
+    top: 0;
+    background-color: #544554; 
+}
+nav .list_nav li {
+    background-color: #544554;
+}
+nav .list_nav li  a {
+    background-color: #544554;
+}
+nav .list_nav li:hover > a,
+nav .list_nav li > a:hover {
+/*    background-color: #2e1f2e !important; */
+    background-color: #544554;
+}
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    header {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        clear: both;
+        background-color: #ccc;
+    }
+    .logo {
+        max-width: 120px;
+        display: block;
+        margin-left: 30px;
+        background: #ccc;
+    }
+
+    .logo-wpr img {
+        width: 100%;
+    }
+    
+    .nav-wrapper {
+        position: absolute;
+        background-color: #2e1f2e;
+        width: 100%;
+        display: block;
+        top: 48px;
+    }
+    nav {
+        position: absolute;
+        background-color: #2e1f2e;
+        width: 100%;
+        display: none;
+        height: auto;
+        text-align: left;
+    }
+    nav > ul > li{border-bottom: 0.5px solid #444;}
+    nav > ul > li > a {
+        line-height: 50px;
+    }
+    nav ul {
+        width: 100%;
+        display: block;
+        text-align: left !important;
+    }
+    nav ul li,
+    nav ul ul li,
+    nav ul li:hover > ul > li {
+        width: 100%;
+        height: auto;
+        border-top: 1px solid #444''
+    }
+    nav ul li a ,
+    nav ul ul li a {
+        width: 100%;
+        text-align: left !important;
+        padding: 0;
+    }
+    nav ul li a, 
+    nav ul ul li a {
+        padding: 10px 10px 10px 30px;
+    }
+    nav ul ul,
+    nav ul ul ul {
+        position: relative;
+        left: 0 !important;
+        right: auto;
+        width: 100%;
+        margin: 0;
+    }
+    nav ul ul li a {
+        padding: 10px 10px 10px 50px !important;
+        font-size: 14px;
+        color: #bbb;
+        background: none;
+    }
+    nav ul ul ul li a {
+        padding: 10px 10px 10px 80px !important;
+        font-size: 14px;
+        color: #bbb;
+        background: none;
+    }
+    nav ul > li.parent > ul {
+        display: none;
+    }
+    
+/*hamburger-menu*/
+
+.hamburger-menu-wrapper {
+    display: none;
+}
+
+/*hamburger-menu*/
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    /*logo*/
+    .logo-wrapper {
+        max-width: 140px;
+        display: block;
+        overflow: hidden;
+        margin-left: 5%;
+    }
+    .logo-wrapper a img {
+        max-width: 100%;
+    }
+    /*-----* Hamburger Start *-----*/
+    /*    hamburger-menu-wrapper   */
+    .hamburger-menu-wrapper {
+        margin-top: 2px;
+        background: #323232;
+        padding: 5px;
+        display: inline-block;
+        float: right;
+        margin-right: 5px;
+    }
+
+    .hamburger-menu-wrapper.bounce-effect {
+        animation: bounce 0.3s ease 1;
+    }
+    .menu {
+        position: relative;
+        min-width: 220px;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        border: 0;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        font-size: 0;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 9999;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .menu-list {
+        display: none;
+        position: absolute;
+        top: calc(100% + 40px);
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .menu-list a {
+        color: #C6D2D6;
+        text-decoration: none;
+        font-size: 18px;
+        display: inline-block;
+        margin: 15px 0;
+        transition: all 0.5s ease;
+    }
+
+    .menu-list a:hover {
+        color: #02D5FD;
+    }
+
+    .hamburger-menu:focus {
+        outline: none;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        position: absolute;
+        top: 17px;
+        left: 5px;
+        right: 5px;
+        height: 2px;
+        background: #02D5FD;
+    }
+
+    .hamburger-menu span:before,
+    .hamburger-menu span:after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #02D5FD;
+        content: "";
+    }
+
+    .hamburger-menu span:before {
+        top: -7px;
+    }
+
+    .hamburger-menu span:after {
+        bottom: -7px;
+    }
+
+    .hamburger-menu span:before,
+    .hamburger-menu span:after {
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+    }
+
+    .hamburger-menu span:before {
+        transition-property: top, transform;
+    }
+
+    .hamburger-menu span::after {
+        transition-property: bottom, transform;
+    }
+
+    .hamburger-menu.active span {
+        background: none;
+    }
+
+    .hamburger-menu.active span:before {
+        top: 0;
+        transform: rotate(225deg);
+    }
+
+    .hamburger-menu.active span:after {
+        bottom: 0;
+        transform: rotate(135deg);
+    }
+    /*-----* Hamburger End *-----*/
+}
+
+
+
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {}

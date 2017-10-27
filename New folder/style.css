@@ -1,0 +1,446 @@
+@charset "utf-8";
+/* font */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto:100,300,400,500,700,900');
+/* CSS Document */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    overflow: hidden;
+}
+
+.spacer {
+    clear: both;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+}
+
+textarea::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    opacity: 1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    background-image: url(images/redirect.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.container {
+    margin: 0 auto;
+    display: block;
+    max-width: 1170px;
+}
+
+/*header*/
+
+header {
+    height: 78px;
+    background-color: #ccc;
+    display: block;
+}
+
+/*logo*/
+
+.logo-wrapper {
+    max-width: 16.66%;
+    background: #333;
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+/*hamburger-menu*/
+
+.hamburger-menu-wrapper {
+    display: none;
+}
+
+/*------------------------------* navigation *------------------------------*/
+
+nav {
+    background-color: transparent;
+    float: right;
+   
+    /*    max-width: 83.34%;*/
+}
+
+nav ul {
+    display: block;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 25px 18px;
+}
+
+nav ul li a {
+/*    line-height: 78px;*/
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #29bada;
+}
+
+/*sub-menu*/
+nav ul li:hover ul {
+/*
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,0);
+*/
+    display: block;
+}
+nav ul ul {
+    position: absolute;
+    width: 180px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    border-top: 2px solid #29bada;
+    border-bottom: 2px solid #29bada;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 70px;
+/*
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0,20px);
+    transition: all 0.2s ease-out;
+*/
+    display: none;
+}
+nav ul ul::before{
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #29bada;
+    border-width: 8px;
+    margin-left: -6px;
+    bottom: 100%;
+    left: 25%;
+}
+nav ul ul li {
+    display: block;
+    background-color: #fff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav ul ul li a {
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    background: #fff;
+}
+
+nav .sub-menu li:hover > a,
+nav .sub-menu li a:hover{
+    color: #29bada;
+    background-color: rgba(0,0,0,0.5);
+}
+/*list-menu*/
+nav ul ul ul {
+    display: none;
+}
+nav ul ul li:hover ul {
+    display: block;
+    position: absolute;
+    width: 180px;
+    left: 180px;
+    top: 0;
+}
+nav ul ul ul::before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+}
+
+/*
+.hamburger-menu-wrapper {
+    display: none;
+}
+*/
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    header {
+        max-height: 50px;
+    }
+    .logo-wrapper{
+        max-width: 120px;
+        margin-left: 30px;
+        top: 2px;
+    }
+    .logo img{
+        max-width: 100%;
+    }
+    /*    hamburger-menu-wrapper   */
+    .hamburger-menu-wrapper {
+        margin-top: 2px;
+        background: #323232;
+        padding: 5px;
+        display: inline-block;
+        float: right;
+        margin-right: 5px;
+    }
+
+    .hamburger-menu-wrapper.bounce-effect {
+        animation: bounce 0.3s ease 1;
+    }
+    .menu {
+        position: relative;
+        min-width: 220px;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        border: 0;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        font-size: 0;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 9999;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .menu-list {
+        display: none;
+        position: absolute;
+        top: calc(100% + 40px);
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .menu-list a {
+        color: #C6D2D6;
+        text-decoration: none;
+        font-size: 18px;
+        display: inline-block;
+        margin: 15px 0;
+        transition: all 0.5s ease;
+    }
+
+    .menu-list a:hover {
+        color: #02D5FD;
+    }
+
+    .hamburger-menu:focus {
+        outline: none;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        position: absolute;
+        top: 17px;
+        left: 5px;
+        right: 5px;
+        height: 2px;
+        background: #02D5FD;
+    }
+
+    .hamburger-menu span:before,
+    .hamburger-menu span:after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #02D5FD;
+        content: "";
+    }
+
+    .hamburger-menu span:before {
+        top: -7px;
+    }
+
+    .hamburger-menu span:after {
+        bottom: -7px;
+    }
+
+    .hamburger-menu span:before,
+    .hamburger-menu span:after {
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+    }
+
+    .hamburger-menu span:before {
+        transition-property: top, transform;
+    }
+
+    .hamburger-menu span::after {
+        transition-property: bottom, transform;
+    }
+
+    .hamburger-menu.active span {
+        background: none;
+    }
+
+    .hamburger-menu.active span:before {
+        top: 0;
+        transform: rotate(225deg);
+    }
+
+    .hamburger-menu.active span:after {
+        bottom: 0;
+        transform: rotate(135deg);
+    }
+    /*-----* Hamburger End *-----*/
+    /*-----* Navigation Start *-----*/
+    nav {
+        width: 100%;
+/*        background-color: #464655;*/
+        background-color: rgba(70,70,85,0.9);
+        display: none;
+    }
+    nav ul li {
+        width: 100%;
+        padding: 15px 20px;
+        border-bottom: 1px solid #7B777B;
+    }
+    nav ul li a {
+        font-size: 16px;
+        line-height: 18px;
+        color: #ccc;
+    }
+    nav ul li a i {
+        padding-left: 5px;
+    }
+    nav ul ul{
+        width: 100%;
+        position: static;
+        display: none;
+        transform: translate(0,0);
+        padding: 0;
+        margin: 0;
+        border: none;
+        float: none;
+        clear: both;
+    }
+    nav ul ul::before{
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+/*    position: absolute;*/
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+/*    border-bottom-color: #29bada;*/
+    border-width: 8px;
+    margin-left: -6px;
+    bottom: 100%;
+    left: 25%;
+}
+    nav ul ul li a {
+        width: 100%;
+        text-align: left;
+    }
+    nav ul ul ul,
+    nav ul ul ul li,
+    nav ul ul ul li a{
+        width: 100%;
+        position: static;
+        display: none;
+    }
+    nav .sub-menu li:hover > a,
+    nav .sub-menu li a:hover{
+    color: #29bada;
+    background-color: rgba(0,0,0,0);
+}
+    nav ul ul ul {
+        display: none;
+    }
+    /*-----* Navigation End *-----*/
+    
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {}
